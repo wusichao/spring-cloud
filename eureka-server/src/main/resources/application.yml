@@ -14,3 +14,43 @@ eureka:
     fetch-registry: false
     serviceUrl: 
       defaultZone: http://localhost:${server.port}/eureka/
+      
+      
+      
+      
+      spring:  
+  application:  
+    name: EUREKA-HA  
+---  
+server:  
+  port: 7777  
+spring:  
+  profiles: peer1  
+eureka:  
+  instance:  
+    hostname: peer1  
+  client:  
+    serviceUrl:  
+      defaultZone: http://peer2:8888/eureka/,http://peer3:9999/eureka/  
+---  
+server:  
+  port: 8888  
+spring:  
+  profiles: peer2  
+eureka:  
+  instance:  
+    hostname: peer2  
+  client:  
+    serviceUrl:  
+      defaultZone: http://peer1:7777/eureka/,http://peer3:9999/eureka/  
+---  
+server:  
+  port: 9999  
+spring:  
+  profiles: peer3  
+eureka:  
+  instance:  
+    hostname: peer3  
+  client:  
+    serviceUrl:  
+      defaultZone: http://peer1:7777/eureka/,http://peer2:8888/eureka/
