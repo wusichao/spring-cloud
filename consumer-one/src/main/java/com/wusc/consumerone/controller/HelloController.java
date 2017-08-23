@@ -14,13 +14,13 @@ import com.wusc.consumerone.service.HelloService;
 public class HelloController {
 	@Autowired
 	private HelloService helloService;
-	@Autowired
-	private DiscoveryClient discoveryClient;
+//	@Autowired
+//	private DiscoveryClient discoveryClient;
 	@RequestMapping(value="say/{name}/{text}")
 	public String say(@PathVariable String name,@PathVariable String text){
-		@SuppressWarnings("deprecation")
-		ServiceInstance instance = discoveryClient.getLocalServiceInstance();
-		System.out.println(instance.getHost()+instance.getPort()+instance.getServiceId());
+//		@SuppressWarnings("deprecation")
+//		ServiceInstance instance = discoveryClient.getLocalServiceInstance();
+//		System.out.println(instance.getHost()+instance.getPort()+instance.getServiceId());
 		return helloService.say(name,text);
 	}
 }
