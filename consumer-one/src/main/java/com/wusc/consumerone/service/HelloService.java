@@ -12,7 +12,6 @@ public class HelloService {
 	public String say(String name, String text) {
 		int sleep= new Random().nextInt(1000);
 		try {
-			
 			System.out.println("hello sleep:"+sleep);
 			Thread.sleep(sleep);
 		} catch (InterruptedException e) {

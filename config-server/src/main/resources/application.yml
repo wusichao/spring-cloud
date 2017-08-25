@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://wxl@123.56.3.96/wxl/clound-config-location.git
+          searchPaths: /
+          username: wxl
+          password: prodconfig
+server:
+  port: 7001
