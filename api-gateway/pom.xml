@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.wusc</groupId>
-	<artifactId>consumer-two</artifactId>
+	<artifactId>api-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>consumer-two</name>
+	<name>api-gateway</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -31,8 +31,8 @@
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zuul</artifactId>
 		</dependency>
 
 		<dependency>

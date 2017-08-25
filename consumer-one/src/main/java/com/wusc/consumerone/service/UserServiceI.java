@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(name="user-server",fallback=UserService.class)
+@FeignClient(name="user",fallback=UserService.class)
 public interface UserServiceI {
-	@RequestMapping(value="/user/user/{name}",method=RequestMethod.GET)
+	@RequestMapping(value="/user/{name}",method=RequestMethod.GET)
 	public ResponseEntity<ModelMap> user(@PathVariable("name") String name);
 }

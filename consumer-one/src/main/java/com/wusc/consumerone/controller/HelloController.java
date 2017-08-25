@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wusc.consumerone.service.HelloService;
 
 @RestController
-@RequestMapping(value="hello",produces="application/json")
+@RequestMapping(produces="application/json")
 public class HelloController {
 	@Autowired
 	private HelloService helloService;

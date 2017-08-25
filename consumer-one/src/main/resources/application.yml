@@ -1,9 +1,13 @@
 spring:
   application:
-    name: hello-one-server
+    name: hello
 server:
-  port: 8081
+  port: 7002
 eureka:
   client:
     serviceUrl: 
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://peer1:1111/eureka/
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 1000
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000

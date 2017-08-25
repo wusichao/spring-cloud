@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wusc.providerone.service.UserService;
 
 @RestController
-@RequestMapping(value="user",produces="application/json")
+@RequestMapping(produces="application/json")
 public class UserController {
 	@Autowired
 	private UserService userService;
