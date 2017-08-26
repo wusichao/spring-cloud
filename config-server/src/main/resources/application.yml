@@ -13,3 +13,10 @@ spring:
           password: wsc15171545112
 server:
   port: 6001
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/
+  instance:
+    preferIpAddress: false
+    hostName: config-server
