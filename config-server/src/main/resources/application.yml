@@ -7,9 +7,9 @@ spring:
     config:
       server:
         git:
-          uri: http://wxl@123.56.3.96/wxl/clound-config-location.git
-          searchPaths: /
-          username: wxl
-          password: prodconfig
+          uri: https://github.com/wusichao/spring-cloud.git
+          searchPaths: /cloud-config
+          username: wusichao
+          password: wsc15171545112
 server:
-  port: 7001
+  port: 6001
