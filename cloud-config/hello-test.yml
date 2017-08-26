@@ -1,0 +1,14 @@
+from: git-test-2.0
+spring:
+  application:
+    name: user
+server:
+  port: 7003
+eureka:
+  client:
+    serviceUrl: 
+      defaultZone: http://peer1:1111/eureka/
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 1000
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
