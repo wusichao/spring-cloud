@@ -1,6 +1,31 @@
 spring:
-  cloud:
-    config:
-      profile: dev
-      label: dev
-      uri: http://localhost:6001/
+  profiles:
+    active: peer1
+  application:
+    name: eureka
+eureka:
+  instance:
+    perferIpAddress: false
+---
+spring:  
+  profiles: peer1 
+server:
+  port: 1111
+eureka:  
+  instance:  
+    hostname: peer1  
+  client:  
+    serviceUrl:  
+      defaultZone: http://peer2:2222/eureka/
+---
+spring:  
+  profiles: peer2 
+server:
+  port: 2222
+eureka:  
+  instance:  
+    hostname: peer2  
+  client:  
+    serviceUrl:  
+      defaultZone: http://peer1:1111/eureka/
+                   
