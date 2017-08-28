@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wusc.providerone.service.UserService;
 
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping(produces="application/json")
 public class UserController {
@@ -19,6 +23,10 @@ public class UserController {
 	private UserService userService;
 	@Autowired
 	private DiscoveryClient discoveryClient;
+	@ApiOperation(value="根据名字获取用户", response=String.class)
+	@ApiImplicitParams({
+		@ApiImplicitParam(dataType="String", paramType="header", value="令牌", name="token", required=true),
+	})
 	@RequestMapping(value="user/{name}",method=RequestMethod.GET)
 	public ResponseEntity<ModelMap> user(@PathVariable String name){
 		@SuppressWarnings("deprecation")
