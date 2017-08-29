@@ -3,6 +3,9 @@ spring:
     name: user
   cloud:
     config:
-      profile: test
+      profile: dev
       label: dev
       uri: http://localhost:6001/
+management:
+  security:
+    enabled: false
