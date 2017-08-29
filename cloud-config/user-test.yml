@@ -2,6 +2,11 @@ from: git-test-2.0
 spring:
   application:
     name: user
+  rabiitmq:
+    host: wusc.com
+    port: 15672
+    username: wusc
+    password: 123456
 server:
   port: 8082
 eureka:
