@@ -7,8 +7,9 @@ import zipkin.server.EnableZipkinServer;
 @SpringBootApplication
 @EnableZipkinServer
 public class ZipkinApplication {
-
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
+		System.out.println("hello");
 		SpringApplication.run(ZipkinApplication.class, args);
 	}
 }
