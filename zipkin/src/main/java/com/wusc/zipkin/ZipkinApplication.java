@@ -9,7 +9,7 @@ import zipkin.server.EnableZipkinServer;
 public class ZipkinApplication {
 	public static void main(String[] args)
 	{
-		System.out.println("hell");
+		System.out.println("hello");
 		SpringApplication.run(ZipkinApplication.class, args);
 	}
 }
